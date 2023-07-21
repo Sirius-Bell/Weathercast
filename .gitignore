@@ -1,8 +1,11 @@
 # Ignore all logs
-logs/
+weathercast/logs/
 
 # Ignore IDEA files
 .idea/
 
 # Ignore poetry lockfile
 poetry.lock
+
+# Ignore enviroenment
+.env
