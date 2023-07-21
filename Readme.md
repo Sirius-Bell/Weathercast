@@ -1,3 +1,10 @@
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+![GitHub repo size](https://img.shields.io/github/repo-size/Sirius-Bell/Weathercast?style=flat-square)
+![GitHub](https://img.shields.io/github/license/Sirius-Bell/Weathercast?style=flat-square)
+
 # Weathercast
 
 Weathercast is an open-source project for daily weather forecast posting to VK (a social network). It allows you to
