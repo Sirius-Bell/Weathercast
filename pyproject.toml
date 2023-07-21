@@ -5,9 +5,13 @@ description = "Simple vk bot for sending weather every day"
 authors = ["Sirius Bell"]
 license = "GNU General Public License v3.0"
 readme = "README.md"
+packages = [{ include = "weathercast" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+loguru = "^0.7.0"
+asyncio = "^3.4.3"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
