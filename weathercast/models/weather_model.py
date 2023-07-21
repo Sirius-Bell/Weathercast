@@ -12,3 +12,5 @@ class Weather:
     current_weather_desc: str
     next_day_weather_c: int
     next_day_weather_desc: str
+    sunrise: str
+    sunset: str
