@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf8 -*-
+
+# ---Sirius Bell---
+# Python 3.11
+
 import sys
 
 from vkbottle import Bot
@@ -13,3 +19,4 @@ if sys.platform.startswith('linux'):
 
 logger.info("Starting bot...")
 bot = Bot(api=api)
+
