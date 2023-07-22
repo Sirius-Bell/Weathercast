@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf8 -*-
+
+# ---Sirius Bell---
+# Python 3.11
+
 import aiohttp
 
 from config import WEATHER_API_KEY, logger
