@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf8 -*-
+
+# ---Sirius Bell---
+# Python 3.11
+
 from dataclasses import dataclass
 
 
@@ -10,4 +16,4 @@ class User:
     id: int
     peer_id: int
     name: str
-    allow_sending: bool = False
+    allow_sending: bool = True
