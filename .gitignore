@@ -9,3 +9,6 @@ poetry.lock
 
 # Ignore enviroenment
 .env
+
+# Ignore database
+db.json
