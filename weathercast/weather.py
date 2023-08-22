@@ -23,6 +23,9 @@ class WeatherInfo:
         }
 
     async def getWeather(self, city: str) -> Weather:
+        """
+        Simple getting weather with parsing to dataclass Weather
+        """
         self.params.update({'city': city})
         async with self.session.get("https://api.weatherapi.com/v1/forecast.json", json=self.params) as resp:
             return await self._parse(await resp.json())
