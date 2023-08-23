@@ -8,7 +8,8 @@ import sys
 
 import asyncio
 from vkbottle import Bot
-from config import logger, api, labeler
+from config import logger, api
+from routes import labelers
 from middlewares import middlewares
 
 if sys.platform.startswith('linux'):
@@ -21,7 +22,8 @@ if sys.platform.startswith('linux'):
 logger.info("Starting bot...")
 bot = Bot(api=api)
 
-bot.labeler.load(labeler)
+for labeler in labelers:
+    bot.labeler.load(labeler)
 
 for middleware in middlewares:
     bot.labeler.message_view.register_middleware(middleware)

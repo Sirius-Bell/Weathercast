@@ -6,10 +6,14 @@
 
 from vkbottle.bot import Message
 from asynctinydb import where
-from weathercast.config import labeler, db
+from vkbottle.framework.labeler import BotLabeler
+
+from weathercast.config import db
+
+lb: BotLabeler = BotLabeler()
 
 
-@labeler.message(command=("sub", 0))
+@lb.message(command=("sub", 0))
 async def sub_handler(message: Message) -> None:
     """
     Subscribe handler.

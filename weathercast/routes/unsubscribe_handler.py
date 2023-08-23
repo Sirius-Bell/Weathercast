@@ -6,10 +6,14 @@
 
 from vkbottle.bot import Message
 from asynctinydb import where
-from weathercast.config import labeler, db
+from vkbottle.framework.labeler import BotLabeler
+
+from weathercast.config import db
+
+lb: BotLabeler = BotLabeler()
 
 
-@labeler.message(command=("unsub", 0))
+@lb.message(command=("unsub", 0))
 async def unsub_handler(message: Message) -> None:
     """
     Unsubscribe handler.

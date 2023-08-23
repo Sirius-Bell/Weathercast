@@ -6,4 +6,6 @@
 
 from . import change_city_handler, subscribe_handler, unsubscribe_handler
 
-labelers = [change_city_handler.ch_city_handler, subscribe_handler.sub_handler, unsubscribe_handler.unsub_handler]
+labelers = [change_city_handler.lb, subscribe_handler.lb, unsubscribe_handler.lb]
+
+__all__ = ["labelers"]
