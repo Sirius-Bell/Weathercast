@@ -4,17 +4,15 @@
 # ---Sirius Bell---
 # Python 3.11
 
-from vkbottle.dispatch.rules.base import PayloadRule
 from vkbottle.bot import Message
 from asynctinydb import where
 from weathercast.config import labeler, db
-from weathercast.payloads.unsub_pay import UNSUBSCRIBE_PAYLOAD
 
 
-@labeler.message(PayloadRule(UNSUBSCRIBE_PAYLOAD))
-async def unsub_router(message: Message) -> None:
+@labeler.message(command=("unsub", 0))
+async def unsub_handler(message: Message) -> None:
     """
-    Unsubscribe router.
+    Unsubscribe handler.
     """
 
     await db.update({"allow_sending": False}, where("peer_id") == message.peer_id)
