@@ -36,4 +36,3 @@ logger.add(sys.stderr,
 db: TinyDB = TinyDB(os.path.join(os.getcwd(), DB_NAME))
 
 api: API = API(token=VK_TOKEN)
-labeler: BotLabeler = BotLabeler()
