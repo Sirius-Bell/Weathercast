@@ -11,4 +11,4 @@ poetry.lock
 .env
 
 # Ignore database
-db.json
+weathercast/db.json
