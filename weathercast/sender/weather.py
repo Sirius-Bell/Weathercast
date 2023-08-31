@@ -6,8 +6,8 @@
 
 import aiohttp
 
-from config import WEATHER_API_KEY, logger
-from models.weather_model import Weather
+from weathercast.config import WEATHER_API_KEY, logger
+from weathercast.models.weather_model import Weather
 
 
 class WeatherInfo:
@@ -17,17 +17,12 @@ class WeatherInfo:
 
     def __init__(self):
         self.session: aiohttp.ClientSession = aiohttp.ClientSession()
-        self.params: dict = {
-            'key': WEATHER_API_KEY,
-            'days': 2
-        }
 
     async def getWeather(self, city: str) -> Weather:
         """
         Simple getting weather with parsing to dataclass Weather
         """
-        self.params.update({'city': city})
-        async with self.session.get("https://api.weatherapi.com/v1/forecast.json", json=self.params) as resp:
+        async with self.session.get(f"https://api.weatherapi.com/v1/forecast.json?key={WEATHER_API_KEY}&q={city}&days=2&lang=ru") as resp:
             return await self._parse(await resp.json())
 
     async def _parse(self, data: dict) -> Weather:
