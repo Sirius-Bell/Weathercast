@@ -1,5 +1,5 @@
 # Ignore all logs
-weathercast/logs/
+logs/
 
 # Ignore IDEA files
 .idea/
@@ -11,4 +11,4 @@ poetry.lock
 .env
 
 # Ignore database
-weathercast/db.json
+db.json
